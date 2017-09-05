@@ -1,0 +1,221 @@
+        <section class="section single-wrap">
+            <div class="container">
+                <div class="page-title public-profile-title">
+                    <div class="row">
+                        <div class="col-sx-12 text-center">
+                            <h3>{{message}}</h3>
+                            <a href="#/shop-add" class="followbtn">Create Store</a><span>-</span> <a href="#/shop-add" class="followbtn">Earn Money</a> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-top">
+                    <div class="row">
+                        <!-- <div class="col-sx-6 col-sm-6">
+                            <div class="custommenu hidden-xs">
+                                <a id="showLeft" href="#" title="" class="bt-menu-trigger"><i class="fa fa-bars"></i> <img src="assets/upload/fav.png" alt=""></a>
+                            </div>
+                        </div>  -->
+
+                        <div class="col-sm-6 col-xs-12 cen-xs text-right">
+                            <ul class="list-inline social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                       
+                            </ul>
+                        </div>
+                    </div><!-- end row -->
+                </div><!-- end content top -->
+
+                <div class="content-before">
+                    <div class="row">
+                        <div class="col-md-6 col-sx-12 cen-xs">
+                            <form class="dropForm">
+                                <div class="input-prepend">
+                                    <div class="btn-group">
+                                        <select name="orderby" class="selectpicker">
+                                          <option>All Platforms</option>
+                                        
+                                      </select>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Search anything here.">
+                                    <button class="btn btn-primary" tabindex="-1"><i class="fa fa-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-6 text-right hidden-xs">
+                            <div class="catalog-order">
+                                <select name="orderby" class="selectpicker">
+                                    <option value="popularity">Sort by Popularity</option>
+                                    <option value="rating">Sort by Average Rating</option>
+                                    <option value="date" selected='selected'>Sort by Newness</option>
+                                    <option value="price">Sort by Price: Low to High</option>
+                                    <option value="price-desc">Sort by Price: High to Low</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div><!-- end row -->
+                </div><!-- end content before -->
+
+                <div class="content">
+                    <div class="row">
+                        <div class="col-md-12 general-title">
+                            <h4>Recent Items <span class="hidden-xs"><a href="#/product-list">View all</a></span></h4>
+                            <hr>
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+                    <div class="row"  ng-controller="ProductController" >
+                        <div class="col-md-3 col-sm-6" ng-repeat="product in products">
+                            <div class="item-box" >
+                                <div class="item-media entry">
+                                    <img src="assets/upload/products/{{product.idProduct}}.jpg" width="242" height="242" alt="" class="img-responsive">
+                                    <div class="magnifier">
+                                    
+                                        <div class="item-author">
+                                            <a ng-click="detailProduct(product.idProduct)" ><img src="assets/upload/member_01.jpg" class="img-circle" alt=""> {{product.nameShop}}</a>
+                                        </div><!-- end author -->
+                                    </div>
+                                    <div class="theme__button">
+                                        <p><a ng-click="detailProduct(product.idProduct)" title="">{{product.price}} $</a></p>
+                                     </div>
+                                   
+                                </div><!-- end item-media -->
+                                <h4><a ng-click="detailProduct(product.idProduct)">{{product.nameProduct}}</a></h4>
+                                <small><a href="single-item.html"><i class="fa fa-eye"></i> {{product.Qte}}</a></small>
+                                <small><a href="single-item.html"><i class="fa fa-comment-o"></i> 12</a></small>
+                            </div><!-- end item-box -->
+                        </div><!-- end col -->
+                        
+
+
+                    </div><!-- end row -->
+                </div><!-- end content -->
+
+                <div class="content-after text-center boxs">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <nav class="pagination-wrapper">
+                                <ul class="pagination">
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div><!-- end row -->
+                </div><!-- end content after -->
+
+                <div class="stores boxs">
+                    <div class="row">
+                        <div class="col-md-12 general-title">
+                            <h4>Featured Store <span class="hidden-xs"><a href="#/shop-list">View all</a></span></h4>
+                            <hr>
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+
+                    <div class="row homefeatured" ng-controller="ShopController">
+                        <div class="col-md-12"   ng-repeat="shop in shops">
+                            <div class="storelist panel panel-info">
+                                <div class="panel-body">
+                                    <div class="form-group row">
+                                        <div class="col-sm-3 col-xs-12">
+                                            <img alt="" class="img-responsive img-thumbnail" src="assets/upload/shops/{{shop.idShop}}.jpg">
+                                        </div>
+                                        <div class="col-sm-2 col-xs-12">
+                                            <h4><a ng-click="detailShop(shop.idShop)">{{shop.nameShop}}</a></h4>
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-envelope-o"></i> Get Support</a></li>
+                                                <li><a href="public-profile.html"><i class="fa fa-image"></i> 123 Items</a></li>
+                                                <li><a href="single-item.html"><i class="fa fa-shopping-cart"></i> 2021 Sales</a></li>
+                                                <li><i class="fa fa-map-marker"></i> {{shop.description}}</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-5 col-xs-12">
+                                           <ul class="list-inline">
+                                                <li><a href="single-item.html" class="screenshot" data-gal="assets/upload/item_01.jpg" title="This is an item title <span>$12.00</span>"><img class="img-responsive img-thumbnail" src="assets/upload/item_01.jpg" alt=""></a></li>
+                                                <li><a href="single-item.html" class="screenshot" data-gal="assets/upload/item_02.jpg" title="This is an item title <span>$12.00</span>"><img class="img-responsive img-thumbnail" src="assets/upload/item_02.jpg" alt=""></a></li>
+                                                <li><a href="single-item.html" class="screenshot" data-gal="assets/upload/item_03.jpg" title="This is an item title <span>$12.00</span>"><img class="img-responsive img-thumbnail" src="assets/upload/item_03.jpg" alt=""></a></li>
+                                                <li><a href="single-item.html" class="screenshot" data-gal="assets/upload/item_04.jpg" title="This is an item title <span>$12.00</span>"><img class="img-responsive img-thumbnail" src="assets/upload/item_04.jpg" alt=""></a></li>
+                                                <li><a href="single-item.html" class="screenshot" data-gal="assets/upload/item_05.jpg" title="This is an item title <span>$12.00</span>"><img class="img-responsive img-thumbnail" src="assets/upload/item_05.jpg" alt=""></a></li>
+                                            </ul>
+                                        </div><!-- end col -->
+                                        <div class="col-sm-2 col-xs-12 text-center">
+                                            <ul>
+                                                <li><a ng-click="detailShop(shop.idShop)" class="btn btn-primary btn-block">Follow Store</a></li>
+                                                <li><a ng-click="detailShop(shop.idShop)" title="">192 Followers</a></li>
+                                                <li><a ng-click="detailShop(shop.idShop)" title="">44 Following</a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- end form-group -->   
+                                </div>
+                            </div>
+                        </div><!-- end col -->
+                    </div><!-- end r0w -->
+                </div><!-- end stores -->
+
+                <div class="refer-messages">
+                    <div class="row text-center">
+                        <div class="col-md-6">
+                            <div class="boxes boxs">
+                                <i class="fa fa-line-chart"></i>
+                                <h3>Sell your Handcrafts</h3>
+                                <p>Create your account, build your store and sell your custom works with tons of clients.</p>
+                                <a href="#" class="btn btn-primary">Upload Your Work</a>
+                            </div>
+                        </div><!-- end col -->
+
+                        <div class="col-md-6">
+                            <div class="boxes boxs">
+                                <i class="fa fa-money"></i>
+                                <h3>Refer Your Friends</h3>
+                                <p>We pay you 30% on every sale you generate. If you run a website, or have a place to display a banner.</p>
+                                <a href="#" class="btn btn-primary">Get Your Link</a>
+                            </div>
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+                </div><!-- end refer-messages -->
+
+                <div class="content-message boxs">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1 text-center">
+                            <h2>See why over 10,000 designers and developers trust Catalog. Ready to take your marketplace to the next level?</h2>
+                            <a href="#" class="btn btn-default btn-lg">Join Today</a>
+                        </div>
+                    </div><!-- end row -->
+                </div><!-- end content message -->
+            </div><!-- end container -->
+        </section>
+        <script src="assets/js/flexslider.js"></script>
+    <script>
+        (function($) {
+        "use strict";
+        $(window).load(function() {
+            $('#carousel').flexslider({
+                animation: "slide",
+                controlNav: false,
+                directionNav: false,
+                animationLoop: true,
+                slideshow: true,
+                itemWidth: 92,
+                itemMargin: 0,
+                asNavFor: '#slider'
+            });
+       
+            $('#slider').flexslider({
+                animation: "fade",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: true,
+                sync: "#carousel"
+            });
+        });
+        })(jQuery);
+    </script>

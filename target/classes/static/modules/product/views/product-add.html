@@ -1,0 +1,204 @@
+
+<section class="section single-wrap" ng-controller="ProductController">
+	<div class="container">
+		<div class="page-title">
+			<div class="row">
+				<div class="col-sx-12 text-center">
+					<h3>{{message1}}</h3>
+					<div class="bread">
+						<ol class="breadcrumb">
+							<li><a href="#">Home</a></li>
+							<li class="active">Add Products</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-top">
+			<div class="row">
+				<div class="col-sx-6 col-sm-6">
+					<div class="custommenu hidden-xs">
+						<a id="showLeft" href="#" title="" class="bt-menu-trigger"><i
+							class="fa fa-bars"></i> <img
+							src="assets/upload/fav.png" alt=""></a>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-xs-12 cen-xs text-right">
+					<ul class="list-inline social">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+						<li><a href="#"><i class="fa fa-behance"></i></a></li>
+						<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- end row -->
+		</div>
+		<!-- end content top -->
+
+		<div class="content-before">
+			<div class="row">
+				<div class="col-md-12 col-sx-12 cen-xs">
+					<form class="dropForm">
+						<div class="input-prepend">
+							<div class="btn-group">
+								<select name="orderby" class="selectpicker">
+									<option>All Platforms</option>
+									
+								</select>
+							</div>
+							<input type="text" class="form-control"
+								placeholder="Search anything here.">
+							<button class="btn btn-primary" tabindex="-1">
+								<i class="fa fa-search"></i>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- end row -->
+		</div>
+		<!-- end content before -->
+
+		<div class="content boxs">
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<div class="storelist panel panel-info">
+						<div class="panel-body" >
+							<div class="form-group row wow fadeIn"">
+								<div class="col-md-3 col-xs-12">
+									<img alt="" class="img-responsive img-thumbnail"
+										src="assets/upload/store_01.jpg">
+								</div>
+								<div class="col-md-2 col-xs-12">
+									<h4>
+										<a ng-click=""></a>
+									</h4>
+								
+								</div>
+								<div class="col-md-5 col-xs-12">
+									<form name="form" ng-submit="AjouterProduct()" role="form">
+									    <div class="form-group">
+									        <label for="nameProduct">Product Name</label>
+									        <i class="fa fa-key"></i>
+									        <input type="text" 
+									        name="nameProduct"  
+									        class="form-control" 
+									        ng-model="nameProduct" 
+									        required 
+									        />
+									    </div>
+									    <div class="form-group">
+									        <label for="description">Description</label>
+									        <i class="fa fa-lock"></i>
+									        <input type="text" 
+									        name="description"  
+									        class="form-control" 
+									        ng-model="description" 
+									        required 
+									        />
+									    </div>
+									    <div class="form-group">
+									        <label for="description">price</label>
+									        <i class="fa fa-lock"></i>
+									      
+									        <input type="number" 
+									        name="price" 
+									        class="form-control" 
+									        ng-model="price" 
+     									  	required 
+     									  	/>
+									    </div>
+									    <div class="form-group">
+									        <label for="Qte">Qte</label>
+									        <i class="fa fa-lock"></i>
+									      
+									        <input type="number" 
+									        name="Qte" 
+									        class="form-control" 
+									        ng-model="Qte" 
+     									  	required 
+     									  	/>
+									    </div>
+									    <div class="form-group">
+									        <label for="dateAdd">Date</label>
+									        <i class="fa fa-lock"></i>
+									      
+									        <input type="datetime-local"
+									        name="dateAdd" 
+									        class="form-control" 
+									        ng-model="dateAdd"
+     									 	placeholder="yyyy-MM-ddTHH:mm:ss"
+     									  	min="2001-01-01T00:00:00" 
+     									  	max="2018-12-31T00:00:00" 
+     									  	required 
+     									  	/>
+									    </div>
+									    <!-- <div class="form-group">
+									        <label for="picture">File</label>
+									        <i class="fa fa-lock"></i>
+										    <input type = "file" 
+										    file-model = "picture"
+										    />
+									    </div> -->
+									  <!--   <input type="hidden" 
+									    name="id_seller" 
+									    value=29 
+									    class="form-control"
+									    ng-model="seller.idUser" 
+									    required 
+									    /> -->
+									    
+									    <div class="form-actions">
+									        <input value="Add Shop" type="submit"  class="btn btn-danger">
+									    </div>
+									</form>
+								</div>
+								<!-- end col -->
+
+							</div>
+							<!-- end form-group -->
+
+							<hr>
+
+
+						</div>
+						<!-- end panel-body -->
+					</div>
+					<!-- end panel -->
+				</div>
+				<!-- end col -->
+			</div>
+			<!-- end row -->
+		</div>
+		<!-- end content -->
+
+		<div class="content-after text-center boxs">
+			<div class="row">
+				<div class="col-md-12">
+					<nav class="pagination-wrapper">
+						<ul class="pagination">
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#" aria-label="Next"> <span
+									aria-hidden="true">&raquo;</span>
+							</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- end row -->
+		</div>
+		<!-- end content after -->
+
+		<!-- end content message -->
+	</div>
+	<!-- end container -->
+</section>

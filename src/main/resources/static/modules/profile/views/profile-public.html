@@ -1,0 +1,154 @@
+<section class="section single-wrap" ng-controller="SellerDetailController">
+            <div class="container">
+                <div class="page-title public-profile-title">
+                    <div class="row">
+                        <div class="col-sx-12 text-center">
+                        <img src="assets/images/avatar.jpg" alt="" class="img-circle">
+                            <h3>{{sellerbyid.name}} {{sellerbyid.lastName}}</h3>
+                            <p>{{sellerbyid.companyName}}</p>
+                            <ul class="list-inline social">
+                                <li><a href="#" title="Follow on Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" title="Follow on Twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" title="Follow on Google Plus"><i class="fa fa-google-plus"></i></a></li>
+                              
+                            </ul>
+                            <a href="#" class="followbtn">Contact</a> <span>-</span> <a href="#" class="followbtn">Follow</a> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-top">
+                    <div class="row">
+                        <!-- <div class="col-sx-6 col-sm-6">
+                            <div class="custommenu hidden-xs">
+                                <a id="showLeft" href="#" title="" class="bt-menu-trigger"><i class="fa fa-bars"></i> <img src="assets/upload/fav.png" alt=""></a>
+                            </div>
+                        </div> --> 
+
+                       <!--  <div class="col-sm-6 col-xs-12 cen-xs text-right">
+                            <div class="bread">
+                                <ol class="breadcrumb">
+                                  <li><a href="#">Home</a></li>
+                                  <li class="active">Public Profile </li>
+                                </ol>
+                            </div>
+                        </div> -->
+                    </div><!-- end row -->
+                </div><!-- end content top -->
+
+                <div class="content boxs nopadtop">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="publicprofile">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a href="#shops" aria-controls="products" role="tab" data-toggle="tab">Shops</a></li>
+                                    <!-- <li role="presentation"><a href="#shops" aria-controls="following" role="tab" data-toggle="tab">Shops</a></li> -->
+                                </ul>
+
+                                <div class="tab-content">
+                                    <!-- <div role="tabpanel" class="tab-pane active" id="products">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-6">
+                                                <div class="item-box">
+                                                    <div class="item-media entry">
+                                                        <img src="assets/upload/item_01.jpg" alt="" class="img-responsive">
+                                                        <div class="magnifier">
+                                                            <div class="item-author">
+                                                                <a href="public-profile.html"><img src="assets/upload/member_01.jpg" class="img-circle" alt=""> Amanda</a>
+                                                            </div> -->
+                                                            <!-- end author -->
+                                                       <!--  </div>
+                                                        <div class="theme__button">
+                                                            <p><a href="single-item.html" title="">$21</a></p>
+                                                        </div>
+                                                    </div> -->
+                                                    <!-- end item-media -->
+                                                   <!--  <h4><a href="single-item.html">Weather Forecast</a></h4>
+                                                    <small><a href="single-item.html"><i class="fa fa-eye"></i> 893</a></small>
+                                                    <small><a href="single-item.html"><i class="fa fa-comment-o"></i> 12</a></small>
+                                                </div> -->
+                                                <!-- end item-box 
+                                            </div>-->
+                                            <!-- end col
+                                        </div> -->
+                                        <!-- end row 
+                                    </div>-->
+                                    
+                                    <div role="tabpanel" class="tab-pane active" id="shops">
+                                        <div class="storelist panel panel-info">
+                                            <div class="panel-body">
+                                                <div class="form-group row">
+                                                    <div class="col-md-3 col-xs-12">
+                                                        <img alt="" class="img-responsive img-thumbnail" src="assets/upload/store_01.jpg">
+                                                    </div>
+                                                    <div class="col-md-2 col-xs-12">
+                                                        <h4><a href="public-profile.html">MockupZone</a></h4>
+                                                        <ul>
+                                                            <li><a href="#"><i class="fa fa-envelope-o"></i> Get Support</a></li>
+                                                            <li><a href="public-profile.html"><i class="fa fa-image"></i> 123 Items</a></li>
+                                                            <li><a href="single-item.html"><i class="fa fa-shopping-cart"></i> 2021 Sales</a></li>
+                                                            <li><i class="fa fa-map-marker"></i> Amsterdam</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-5 col-xs-12">
+                                                       <ul class="list-inline">
+                                                            <li><a href="single-item.html" class="screenshot" data-gal="assets/upload/item_01.jpg" title="This is an item title <span>$12.00</span>"><img class="img-responsive img-thumbnail" src="assets/upload/item_01.jpg" alt=""></a></li>
+                                                            <li><a href="single-item.html" class="screenshot" data-gal="assets/upload/item_02.jpg" title="This is an item title <span>$12.00</span>"><img class="img-responsive img-thumbnail" src="assets/upload/item_02.jpg" alt=""></a></li>
+                                                            <li><a href="single-item.html" class="screenshot" data-gal="assets/upload/item_03.jpg" title="This is an item title <span>$12.00</span>"><img class="img-responsive img-thumbnail" src="assets/upload/item_03.jpg" alt=""></a></li>
+                                                            <li><a href="single-item.html" class="screenshot" data-gal="assets/upload/item_04.jpg" title="This is an item title <span>$12.00</span>"><img class="img-responsive img-thumbnail" src="assets/upload/item_04.jpg" alt=""></a></li>
+                                                            <li><a href="single-item.html" class="screenshot" data-gal="assets/upload/item_05.jpg" title="This is an item title <span>$12.00</span>"><img class="img-responsive img-thumbnail" src="assets/upload/item_05.jpg" alt=""></a></li>
+                                                        </ul>
+                                                    </div><!-- end col -->
+                                                    <div class="col-md-2 col-xs-12 text-center">
+                                                        <ul>
+                                                            <li><a href="#" class="btn btn-primary btn-block">Follow Store</a></li>
+                                                            <li><a href="public-profile.html" title="">192 Followers</a></li>
+                                                            <li><a href="public-profile.html" title="">44 Following</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div><!-- end form-group -->       
+
+                                                <hr>
+
+                                                
+                                            </div><!-- end panel-body -->
+                                        </div><!-- end panel -->
+                                    </div>
+                                 
+                                </div>
+                            </div>                  
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+                </div><!-- end content -->
+
+                <div class="content-after text-center boxs">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <nav class="pagination-wrapper">
+                                <ul class="pagination">
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div><!-- end row -->
+                </div><!-- end content after -->
+
+                <div class="content-message boxs">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1 text-center">
+                            <h2> Ready to take your marketplace to the next level?</h2>
+                            <a href="#/login" class="btn btn-default btn-lg">Join the Market Today</a>
+                        </div>
+                    </div><!-- end row -->
+                </div><!-- end content message -->
+            </div><!-- end container -->
+        </section>

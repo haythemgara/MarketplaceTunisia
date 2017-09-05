@@ -1,0 +1,161 @@
+ <section class="section single-wrap"  ng-controller="ProductDetailController">
+            <div class="container">
+                <div class="page-title">
+                    <div class="row">
+                        <div class="col-sx-12 text-center">
+                            <h3>{{productbyid.nameProduct}}</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-top">
+                    <div class="row">
+                        <div class="col-sx-6 col-sm-6">
+                            <div class="custommenu hidden-xs">
+                                <a id="showLeft" href="#" title="" class="bt-menu-trigger"><i class="fa fa-bars"></i> <img src="assets/upload/fav.png" alt=""></a>
+                            </div>
+                        </div> 
+
+                        <div class="col-sm-6 col-xs-12 cen-xs text-right">
+                            <div class="bread">
+                                <ol class="breadcrumb">
+                                  <li><a href="#">Home</a></li>
+                                  <li><a href="#">Shop</a></li>
+                                  <li class="active">{{}}</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div><!-- end row -->
+                </div><!-- end content top -->
+
+                <div class="row">
+                    <div id="singlewrapper" class="col-md-8">
+                        
+
+                        <div class="content nopad" >
+                        <h1>{{productbyid.nameProduct}}</h1>
+                            <div class="item-single-wrapper" >
+                                <div class="item-box">
+                                
+                                    <div class="item-media text-center">
+                                        
+                                        <div id="carousel" class="flexslider clearfix">
+                                            <img src="assets/upload/products/{{productbyid.idProduct}}.jpg" alt="" class="img-responsive"></li>
+                                                
+                                           
+                                        </div>  
+                                    </div><!-- end item-media -->
+
+                                    <div class="item-desc">
+                                        <p>Description : {{productbyid.description}} </p>
+
+                                      
+                                    </div><!-- end item-desc -->
+                                </div><!-- end item-box -->
+                            </div><!-- end item-single-wrapper -->
+                        </div><!-- end content -->
+
+
+                    </div><!-- end singlewrapper -->
+
+                    <div id="sidebar" class="col-md-4">
+                        <div class="boxes boxs">
+                            <div class="item-price text-center">
+                                <p>{{productbyid.price}} $</p>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <hr>
+                                <small><a href="#"><i class="fa fa-star-o"></i> Add to Favorites</a> &nbsp;&nbsp; <a href="#"><i class="fa fa-heart-o"></i> Like it</a> </small>
+                                <hr>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                                <ul class="list-inline social">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                   
+                                </ul>
+                            </div><!-- end price -->
+                        </div><!-- end boxes -->
+
+                        <div class="boxes boxs">
+                            <div class="desiger-details text-center">
+                                <img src="assets/upload/users/{{seller.idUser}}.jpg" class="img-circle" alt=""></a>
+                                <h4><a href="public-profile.html">{{seller.name}} {{seller.lastName}}  - SAB</a></h4>
+                                <small><a href="#"><i class="fa fa-envelope-o"></i> Send a Message</a> &nbsp;&nbsp; <a href="#"><i class="fa fa-user-plus"></i> Follow {{seller.name}}'s</a> </small>
+                            </div><!-- end designer -->
+                        </div><!-- end boxes -->
+
+                        <div class="boxes boxs">
+                            <div class="item-details">
+                                <table>
+                                    <tr>
+                                        <td>Release on:</td>
+                                        <td>{{productbyid.dateAdd| date:'medium' }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Price:</td>
+                                        <td>{{productbyid.price}}$</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Qte:</td>
+                                        <td>{{productbyid.Qte}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Name:</td>
+                                        <td>{{productbyid.nameProduct}}</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>Discount:</td>
+                                        <td>No</td>
+                                    </tr>
+                                    
+                                    
+
+                                </table>
+                            </div><!-- end item-details -->
+                        </div><!-- end boxes -->
+                    </div><!-- end sidebar -->
+                </div><!-- end row -->
+
+                <div class="content-message boxs">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1 text-center">
+                            <h2>See why over 10,000 designers and developers trust Catalog. Ready to take your marketplace to the next level?</h2>
+                            <a href="#" class="btn btn-default btn-lg">Join Today</a>
+                        </div>
+                    </div><!-- end row -->
+                </div><!-- end content message -->
+            </div><!-- end container -->
+        </section>
+<script src="assets/js/flexslider.js"></script>
+    <script>
+        (function($) {
+        "use strict";
+        $(window).load(function() {
+            $('#carousel').flexslider({
+                animation: "slide",
+                controlNav: false,
+                directionNav: false,
+                animationLoop: true,
+                slideshow: true,
+                itemWidth: 92,
+                itemMargin: 0,
+                asNavFor: '#slider'
+            });
+       
+            $('#slider').flexslider({
+                animation: "fade",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: true,
+                sync: "#carousel"
+            });
+        });
+        })(jQuery);
+    </script>

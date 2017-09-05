@@ -1,0 +1,142 @@
+
+<section class="section single-wrap" ng-controller="ShopController">
+	<div class="container">
+		<div class="page-title">
+			<div class="row">
+				<div class="col-sx-12 text-center">
+					<h3>{{message1}}</h3>
+					<div class="bread">
+						<ol class="breadcrumb">
+							<li><a href="#">Home</a></li>
+							<li class="active">Add New Shop</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-top">
+			<div class="row">
+				<div class="col-sx-6 col-sm-6">
+					<div class="custommenu hidden-xs">
+						<a id="showLeft" href="#" title="" class="bt-menu-trigger"><i
+							class="fa fa-bars"></i> <img
+							src="assets/upload/fav.png" alt=""></a>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-xs-12 cen-xs text-right">
+					<ul class="list-inline social">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+						
+					</ul>
+				</div>
+			</div>
+			<!-- end row -->
+		</div>
+		<!-- end content top -->
+
+
+		<!-- end content before -->
+
+		<div class="content boxs">
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<div class="storelist panel panel-info">
+						<div class="panel-body" >
+							<div class="form-group row wow fadeIn"">
+								<div class="col-md-3 col-xs-12">
+									<img alt="" class="img-responsive img-thumbnail"
+										src="assets/upload/newShop.jpg">
+								</div>
+								<div class="col-md-2 col-xs-12">
+									<h4>
+										<a ng-click=""></a>
+									</h4>
+								
+								</div>
+								<div class="col-md-5 col-xs-12">
+									<form name="form" ng-submit="AjouterShop()" role="form">
+									    <div class="form-group">
+									        <label for="nameShop">Shop Name</label>
+									        <i class="fa fa-key"></i>
+									        <input type="text" 
+									        name="nameShop"  
+									        class="form-control" 
+									        ng-model="nameShop" 
+									        required 
+									        />
+									    </div>
+									    <div class="form-group">
+									        <label for="description">Description</label>
+									        <i class="fa fa-text-width"></i>
+									         <textarea class="form-control" name="description"  rows="5" id="description" ng-model="description" 
+									        required ></textarea>
+									        
+									    </div>
+									    <div class="form-group">
+									        <label for="dateCreation">Date</label>
+									        <i class="fa fa-calendar"></i>
+									      
+									        <input type="datetime-local" 
+									        name="dateCreation" 
+									        class="form-control" 
+									        ng-model="dateCreation"
+     									 	placeholder="yyyy-MM-ddTHH:mm:ss"
+     									  	min="2001-01-01T00:00:00" 
+     									  	max="2018-12-31T00:00:00" 
+     									  	required 
+     									  	/>
+									    </div>
+									    <div class="form-group">
+									        <label for="File">Image Shop</label>
+									        <i class="fa fa-picture-o"></i>
+									    	<input type="file" file-model="myFile" />
+									    </div>
+									    <!-- <div class="form-group">
+									        <label for="picture">File</label>
+									        <i class="fa fa-lock"></i>
+										    <input type = "file" 
+										    file-model = "picture"
+										    />
+									    </div> -->
+									  <!--   <input type="hidden" 
+									    name="id_seller" 
+									    value=29 
+									    class="form-control"
+									    ng-model="seller.idUser" 
+									    required 
+									    /> -->
+									    
+									    <div class="form-actions">
+									        <input value="Add Shop" type="submit"  class="btn btn-danger">
+									    </div>
+									</form>
+								</div>
+								<!-- end col -->
+
+							</div>
+							<!-- end form-group -->
+
+							<hr>
+
+
+						</div>
+						<!-- end panel-body -->
+					</div>
+					<!-- end panel -->
+				</div>
+				<!-- end col -->
+			</div>
+			<!-- end row -->
+		</div>
+		<!-- end content -->
+
+		<!-- end content after -->
+
+		<!-- end content message -->
+	</div>
+	<!-- end container -->
+</section>
